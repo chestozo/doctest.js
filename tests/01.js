@@ -35,10 +35,10 @@ Summer.prototype.add = function(num) {
 var trim = function(str) {
     var rx = /^\s*([^\s]*)\s*$/gi;
     var r = str.replace(rx, '\1');
-    // @test: str=' a'  => r='a' // задаём значение переменной в данном месте функции
+    // @test: str=' a'  => r='a' // set variable value on this function line
     // @test: str='a '  => r='a'
     // @test: str=' a ' => r='a'
     // или
-    // @test: ' a ' => r='a'     // задаём параметры для функции
+    // @test: ' a ' => r='a'     // on the left we have function parameters syntax, on the right — variable value
     return r;
 };
