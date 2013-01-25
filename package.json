@@ -1,0 +1,13 @@
+{
+    "author": {
+        "name": "chestozo"
+    },
+    "name": "doctest.js",
+    "description": "jsdoc extension to support tests in @test properties",
+    "version": "0.0.1",
+    "dependencies": {},
+    "devDependencies": {
+        "mocha": "*",
+        "expect.js": "*"
+    }
+}
