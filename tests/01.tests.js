@@ -16,7 +16,7 @@ var sum = function(a, b) {
     return a + b;
 };
 // One @test is equal to one describe() call.
-describe('sum', function() {
+describe('sum()', function() {
     // Every test line in @test is transformed into one it() call.
     it('1, 2 => 3', function() {
         expect(sum(1,2)).to.be.equal(3);
@@ -25,8 +25,6 @@ describe('sum', function() {
         expect( isNaN( sum(undefined, 1) ) ).to.be.ok(); // NOTE: for NaN we'll have to write some extra code.
     });
 });
-
-
 
 // 2. Class declarations.
 var Summer = function(base) {
@@ -41,6 +39,17 @@ var Summer = function(base) {
 Summer.prototype.add = function(num) {
     this.base += num;
 };
+
+describe('Summer.add()', function() {
+    it('this:{ base: 1 } 3 => this:{ base: 4 }', function() {
+        var o1 = new Summer();
+        o1.base = 1; // NOTE !!!
+
+        o1.add(3);
+
+        expect(o1.base).to.be.equal(4); // ? compare objects
+    });
+});
 
 
 // Future.

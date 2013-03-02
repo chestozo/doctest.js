@@ -30,6 +30,20 @@ Summer.prototype.add = function(num) {
 };
 
 
+// 3. Object declaration.
+var G = {
+    prop: 1,
+
+    /**
+        @test:
+            () => { prop: 2 } // ?
+     */
+    count: function() {
+        this.prop++;
+    }
+};
+
+
 // Future.
 // a. Inside the function.
 var trim = function(str) {
