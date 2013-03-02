@@ -6,10 +6,8 @@
     "description": "jsdoc extension to support tests in @test properties",
     "version": "0.0.1",
     "dependencies": {
-        "esprima": "*"
-    },
-    "devDependencies": {
         "mocha": "*",
-        "expect.js": "*"
+        "expect.js": "*",
+        "esprima": "*"
     }
 }
